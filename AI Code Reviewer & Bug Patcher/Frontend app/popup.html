@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Reviewer</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-main">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <h1>AI Code Reviewer</h1>
+                </div>
+                <div class="header-actions">
+                    <div class="status-badge">
+                        <span class="status-indicator status-offline" id="statusIndicator"></span>
+                        <span id="statusText">Connecting...</span>
+                    </div>
+                    <button id="settingsBtn" class="icon-btn" title="Settings">⚙️</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Settings Modal -->
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Settings</h3>
+                    <button id="closeSettingsBtnTop" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <label for="apiUrlInput">Backend API URL</label>
+                        <input id="apiUrlInput" type="text" placeholder="http://localhost:5000">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="saveSettingsBtn" class="btn primary">Save Changes</button>
+                    <button id="closeSettingsBtn" class="btn secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <section class="controls">
+                <div class="input-group">
+                    <label for="language">Programming Language</label>
+                    <div class="select-wrapper">
+                        <select id="language">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                            <option value="csharp">C#</option>
+                            <option value="php">PHP</option>
+                            <option value="ruby">Ruby</option>
+                            <option value="go">Go</option>
+                            <option value="rust">Rust</option>
+                            <option value="typescript">TypeScript</option>
+                            <option value="react">React/JSX</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="sql">SQL</option>
+                            <option value="bash">Bash</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <section class="editor-section">
+                <div class="editor-header">
+                    <label for="code">Your Code</label>
+                    <button id="clearBtn" class="text-btn">Clear</button>
+                </div>
+                <textarea id="code" placeholder="Paste your code here..."></textarea>
+                <div class="buttons">
+                    <button id="reviewBtn" class="btn primary-gradient">
+                        <span class="btn-icon">📋</span> Review Code
+                    </button>
+                    <button id="bugBtn" class="btn secondary-gradient">
+                        <span class="btn-icon">🐛</span> Find Bugs
+                    </button>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div id="errorMessage" class="message error"></div>
+                <div id="successMessage" class="message success"></div>
+                <div id="output"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by Advanced AI • v1.0.0</p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #1e1e2f;
+    color: #ffffff;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #4da6ff;
+    margin-bottom: 10px;
+}
+
+/* Code box */
+textarea {
+    width: 100%;
+    height: 130px;
+    background: #2c2c3e;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+}
+
+/* Buttons */
+.buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #4da6ff, #0066ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #66b3ff, #005ce6);
+}
+
+/* Output */
+#output {
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+/* Cards */
+.card {
+    padding: 8px;
+    margin: 6px 0;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+/* Types */
+.error {
+    background: #ff4d4d33;
+    border-left: 4px solid red;
+}
+
+.improvement {
+    background: #ffd63333;
+    border-left: 4px solid orange;
+}
+
+.bug {
+    background: #ff1a1a33;
+    border-left: 4px solid #ff1a1a;
+}
+
+.patch {
+    background: #00cc6633;
+    border-left: 4px solid #00cc66;
+}
+
+/* Scrollbar */
+#output::-webkit-scrollbar {
+    width: 5px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}

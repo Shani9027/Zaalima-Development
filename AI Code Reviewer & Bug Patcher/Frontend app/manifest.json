@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "AI Code Reviewer",
+  "version": "1.0",
+  "description": "Review code and detect bugs using AI",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "http://localhost:5000/*",
+    "http://localhost/*"
+  ]
+}
