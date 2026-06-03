@@ -1,0 +1,139 @@
+.file-manager {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.file-manager-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.file-manager-header p {
+  margin: 0.5rem 0 0;
+  color: var(--text-secondary);
+  max-width: 38rem;
+}
+
+.file-upload-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.upload-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.file-input-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.file-input-label input {
+  display: none;
+}
+
+.upload-button {
+  padding: 0.85rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.upload-button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.upload-button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.upload-preview,
+.file-error,
+.file-success {
+  margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: 12px;
+}
+
+.upload-preview {
+  background: var(--surface-alt);
+  color: var(--text-primary);
+}
+
+.file-error {
+  background: rgba(230, 80, 80, 0.12);
+  color: var(--danger);
+}
+
+.file-success {
+  background: rgba(56, 161, 105, 0.12);
+  color: var(--success);
+}
+
+.file-list-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.file-list-header h3 {
+  margin: 0;
+}
+
+.file-list-header span {
+  color: var(--text-secondary);
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+.file-table th,
+.file-table td {
+  text-align: left;
+  padding: 0.95rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.file-table thead th {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.file-table tbody tr:hover {
+  background: rgba(82, 97, 255, 0.05);
+}
+
+.empty-state {
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
