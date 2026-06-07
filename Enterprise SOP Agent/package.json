@@ -1,0 +1,41 @@
+{
+    "name":  "opsmind-ai",
+    "version":  "1.0.0",
+    "private":  true,
+    "description":  "OpsMind AI full-stack web app for enterprise SOP intelligence.",
+    "main":  "dist/src/server.js",
+    "scripts":  {
+                    "dev":  "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+                    "dev:server":  "tsx watch src/server.ts",
+                    "dev:client":  "vite --config client/vite.config.ts",
+                    "build":  "npm run build:client \u0026\u0026 npm run build:server",
+                    "build:client":  "vite build --config client/vite.config.ts",
+                    "build:server":  "tsc -p tsconfig.json",
+                    "start":  "node dist/src/server.js",
+                    "test":  "vitest run",
+                    "typecheck":  "tsc -p tsconfig.json --noEmit"
+                },
+    "dependencies":  {
+                         "express":  "^4.19.2",
+                         "react":  "^19.1.0",
+                         "react-dom":  "^19.1.0",
+                         "axios":  "^1.7.7",
+                         "lucide-react":  "^0.378.0",
+                         "openai": "^5.8.0",
+                         "zod":  "^3.23.8"
+                     },
+    "devDependencies":  {
+                            "@types/express":  "^5.0.0",
+                            "@types/node":  "^22.15.29",
+                            "@types/react":  "^19.1.6",
+                            "@types/react-dom":  "^19.1.6",
+                            "@types/supertest":  "^7.2.0",
+                            "@vitejs/plugin-react":  "^5.0.4",
+                            "concurrently":  "^9.1.2",
+                            "supertest":  "^7.1.0",
+                            "tsx":  "^4.19.2",
+                            "typescript":  "^5.8.3",
+                            "vite":  "^6.3.5",
+                            "vitest":  "^3.1.4"
+                        }
+}
